@@ -10,7 +10,7 @@ const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rho
 
 const app = express();
 
-const posts = [];
+let posts = [];
 
 app.set('view engine', 'ejs');
 
