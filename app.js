@@ -35,7 +35,6 @@ app.get("/compose", function(req, res){
   res.render("compose");
 });
 
-
 app.post("/compose", function(req, res){
 
   const post = {
@@ -49,7 +48,9 @@ app.post("/compose", function(req, res){
 });
 
 
-
+app.get("/posts/:xyzID", function(req, res){
+  console.log(req.params.xyzID);
+});
 
 
 
