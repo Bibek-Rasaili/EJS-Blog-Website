@@ -51,17 +51,22 @@ app.post("/compose", function(req, res){
 
 
 app.get("/posts/:postName", function(req, res){
-  console.log(req.params.postName);
 
   const lowerCasePostName = _.lowerCase(req.params.postName);
+  //lower cases and strips kebab-case
 
   posts.forEach(function(post){
-    const lowerCasePostTitle = _.lowerCase(post.title);
+    const lowerCasePostTitle = _.lowerCase(post.title); //same here
 
-    if (lowerCasePostTitle === lowerCasePostName) {
-      console.log("Match Found!");
+    if (lowerCasePostTitle === lowerCasePostName) { //compares the url/route to post array
+      //if found, render a page(post.ejs), displaying the title and content
+      res.render("post", {postTitle: post.title, postContent:post.body});
+    } else {
+      console.log("Error! no match found!");
+      //boolean can be used here and this can be displayed later
     }
   });
+
 
 });
 
