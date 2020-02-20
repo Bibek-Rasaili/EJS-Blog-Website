@@ -62,15 +62,13 @@ app.get("/posts/:postName", function(req, res){
       //if found, render a page(post.ejs), displaying the title and content
       res.render("post", {postTitle: post.title, postContent:post.body});
     } else {
+
       console.log("Error! no match found!");
       //boolean can be used here and this can be displayed later
     }
   });
 
-
 });
-
-
 
 
 
