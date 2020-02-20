@@ -19,8 +19,8 @@ app.use(express.static("public"));
 
 
 app.get("/", function(req, res){
-  console.log(posts);
-  res.render("home", {homeStartingContent: homeStartingContent});
+  //Challenge is log in the home.ejs instead of from here
+  res.render("home", {homeStartingContent: homeStartingContent, posts: posts});
 });
 
 
