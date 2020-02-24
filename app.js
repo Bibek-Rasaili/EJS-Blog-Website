@@ -19,11 +19,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-
 app.get("/", function(req, res){
   res.render("home", {homeStartingContent: homeStartingContent, posts: posts});
 });
-
 
 app.get("/about", function(req, res){
   res.render("about", {aboutContent: aboutContent});
@@ -67,9 +65,7 @@ app.get("/posts/:postName", function(req, res){
       //boolean can be used here and this can be displayed later
     }
   });
-
 });
-
 
 
 app.listen(process.env.PORT || 3000, function() {
