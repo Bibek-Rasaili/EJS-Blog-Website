@@ -34,7 +34,8 @@
   color: #fff;
 }
 
-@media screen and (max-width:800px) {
+/* for device width less than 800px only. */
+@media screen and (max-device-width:800px) {
   .footer {
     display: block;
     position: static;
@@ -47,10 +48,10 @@
     font-size: 1.5rem;
   }
 
-
   h1 {
     font-size: 4rem;
   }
+
   p {
     font-size: 2.25rem;
   }
