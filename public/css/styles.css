@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -20,41 +25,31 @@
 }
 
 .footer {
-	position: absolute;
+  display: block;
+  position: static;
+  padding: 20px 0;
+  overflow: hidden;
+
 	text-align: center;
-	bottom: 0;
 	width: 100%;
 	height: 60px;
 	background-color: #1abc9c;
 }
 
 .footer p {
-	margin-top: 25px;
-	font-size: 12px;
+  margin: 0;
+  padding: 0;
+	font-size: 1.5rem;;
   color: #fff;
 }
 
-/* for max-WIDTH less than 800px only. */
-@media screen and (max-width:800px) {
-  .footer {
-    display: block;
-    position: static;
-    /* solving floating footer */
-    padding: 20px 0;
-  }
-  .footer p {
-    margin: 0;
-    padding: 0;
-    font-size: 1.5rem;
-  }
-
-  h1 {
-    font-size: 4rem;
-  }
-
-  p {
-    font-size: 2.25rem;
-  }
+/* pushing footer down*/
+.container-body {
+  min-height: 500px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  width: 85%;
+  margin: auto;
 }
 
 /* for DEVICE width less than 800px only. */
@@ -71,16 +66,32 @@
     padding: 0; */
     font-size: 1.85rem;
   }
-
+  .container-body {
+    width: 90%;
+  }
   .navbar {
     font-size: 2rem;
   }
-
   h1 {
     font-size: 5rem;
   }
-
   p {
     font-size: 3rem;
+  }
+}
+
+/* for max-WIDTH less than 800px only. */
+@media screen and (max-width:800px) {
+  .container-body {
+    width: 90%;
+  }
+  .footer p {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 2.25rem;
   }
 }
